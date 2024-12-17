@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Section Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .offer-slider {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .offer_box {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .offer_box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer_box h3 {
+            font-size: 24px;
+            color: #ff0505;
+            margin-bottom: 20px;
+        }
+
+        .offer_box figure {
+            margin-bottom: 20px;
+        }
+
+        .offer_box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .offer_box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .read-more {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            background: #ff0505;
+            color: #fff !important;
+            padding: 12px 20px;
+            font-size: 17px;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #e00404;
+        }
+
+        .slick-dots li button:before {
+            color: #ff0505;
+        }
+
+        @media (max-width: 768px) {
+            .offer-slider {
+                width: 100%;
+            }
+
+            .offer_box {
+                margin-bottom: 30px;
+            }
+
+            .read-more {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offer-slider">
+        <div class="slide">
+            <div class="offer_box">
+                <h3>Agriculture Products</h3>
+                <figure><img src="images/offer1.png" alt="Agriculture Products"></figure>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <a class="read-more" href="products.html">See More</a>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="offer_box">
+                <h3>Fresh Vegetables</h3>
+                <figure><img src="images/offer2.png" alt="Fresh Vegetables"></figure>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a class="read-more" href="products.html">See More</a>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="offer_box">
+                <h3>Farm Factory</h3>
+                <figure><img src="images/offer3.png" alt="Farm Factory"></figure>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a class="read-more" href="products.html">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery and Slick Slider JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.offer-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    </script>
+</body>
+</html>
